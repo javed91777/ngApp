@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-customerManagerPortalNavbar></app-customerManagerPortalNavbar>
+
 <div style="text-align:center">
+    <app-menu></app-menu>
   <!-- <h1>
     Welcome to {{ title }}
   </h1>
@@ -11,7 +12,7 @@
   </h1>
   <app-customerscomponent></app-customerscomponent>
 
-  <input type="text" #tval (keyup) = 'tval'>
+  <!-- <input type="text" #tval (keyup) = 'tval'>
   <br>
   <p>{{tval.value}}</p>
   <input type="text" #tvar (input) = 'name = tvar.value'>
@@ -66,7 +67,9 @@
   <br><button (click)="displayMessage()">Display Message</button>
   {{message}}
   <br>
-  <input type="text" (input)="readMessageText($event)">
+  <input type="text" (input)="readMessageText($event)"> -->
+
+  <router-outlet></router-outlet>
 
 </div>
 
