@@ -9,15 +9,18 @@ import {RouterModule} from "@angular/router"
 import {OrdersComponent} from "./orders/orders.component"
 import {FormsModule} from "@angular/forms"
 import {RouteModule} from "./app.route"
+import {CoreModule} from "./core/core.module"
+import {HttpClientModule} from "@angular/common/http"
+import {Service} from "./core/services/service"
 
 @NgModule({
   declarations: [
-    AppComponent,MenuComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,FormsModule,RouterModule,RouteModule
+    BrowserModule,FormsModule,RouterModule,RouteModule, CoreModule, HttpClientModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

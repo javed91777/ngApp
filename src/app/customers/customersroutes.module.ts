@@ -5,9 +5,12 @@ import {NgModule} from "@angular/core"
 import {RouterModule}  from "@angular/router"
 
 const custroutes = [
-    {   path:'', component:CustomersComponent},
-    {   path:'cardView', component:CustomersCardViewComponent},
-    {   path:'listView', component:CustomersListViewComponent}
+    {   path:'', component:CustomersComponent,
+        children: [
+            {path:'cardView', component: CustomersCardViewComponent},
+            {path: 'listView', component: CustomersListViewComponent}
+        ]
+    }
 ]
 
 @NgModule({

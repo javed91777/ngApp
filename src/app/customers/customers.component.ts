@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {Service} from "../core/services/service"
 
 @Component({
     selector: 'app-customerscomponent',
@@ -6,6 +7,12 @@ import {Component} from "@angular/core";
 })
 
 export class CustomersComponent{
+    constructor(public data: Service){
+        this.data.getInfo().subscribe(function dataInfo{
+            console.log(dataInfo);
+        })
+    }
+
     obj ={
         name: 'Ravi'
     }
