@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core"
 import {Routes, RouterModule} from "@angular/router"
 import {OrdersRouterModule} from "./orders/ordersroutes.module"
+import {CustomersRouterModule} from "./customers/customersroutes.module"
 
 const routes:Routes =[
     {path:'customers', loadChildren:"./customers/customers.module#CustomersModule"},
@@ -9,7 +10,7 @@ const routes:Routes =[
 ]
 
 @NgModule({
-    imports:[RouterModule.forRoot(routes), OrdersRouterModule],
+    imports:[RouterModule.forRoot(routes), OrdersRouterModule, CustomersRouterModule ],
     exports:[RouterModule]
 })
 export class RouteModule{

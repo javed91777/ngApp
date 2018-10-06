@@ -8,7 +8,7 @@ import {Service} from "../core/services/service"
 
 export class CustomersComponent{
     constructor(public data: Service){
-        this.data.getInfo().subscribe(function dataInfo{
+        this.data.getInfo().subscribe(function (dataInfo){
             console.log(dataInfo);
         })
     }
