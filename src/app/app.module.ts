@@ -12,6 +12,7 @@ import {RouteModule} from "./app.route"
 import {CoreModule} from "./core/core.module"
 import {HttpClientModule} from "@angular/common/http"
 import {Service} from "./core/services/service"
+import {CommonModule} from "@angular/common"
 
 @NgModule({
   declarations: [

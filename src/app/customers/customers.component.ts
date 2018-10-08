@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Service} from "../core/services/service"
 
 @Component({
@@ -6,11 +6,21 @@ import {Service} from "../core/services/service"
     templateUrl: 'customers.component.html'
 })
 
-export class CustomersComponent{
-    constructor(public data: Service){
-        this.data.getInfo().subscribe(function (dataInfo){
+export class CustomersComponent implements OnInit{
+    datacontent;
+    currentData;
+    constructor(public data: Service){        
+        
+    }
+
+    ngOnInit(){
+        let selfthis = this;
+        this.data.getInfo().subscribe(function (dataInfo){            
             console.log(dataInfo);
+            selfthis.datacontent = dataInfo;
+            console.log('inside subscribe method', this.datacontent);
         })
+        setTimeout(()=>{console.log('setTimeout',this.datacontent)},1000);        
     }
 
     obj ={

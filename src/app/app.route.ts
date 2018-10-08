@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core"
 import {Routes, RouterModule} from "@angular/router"
 import {OrdersRouterModule} from "./orders/ordersroutes.module"
 import {CustomersRouterModule} from "./customers/customersroutes.module"
+import {CommonModule} from "@angular/common"
 
 const routes:Routes =[
     {path:'customers', loadChildren:"./customers/customers.module#CustomersModule"},
@@ -10,7 +11,7 @@ const routes:Routes =[
 ]
 
 @NgModule({
-    imports:[RouterModule.forRoot(routes), OrdersRouterModule, CustomersRouterModule ],
+    imports:[RouterModule.forRoot(routes)],
     exports:[RouterModule]
 })
 export class RouteModule{
