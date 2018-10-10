@@ -3,6 +3,7 @@ import { Component, Input, OnChanges } from "@angular/core";
 @Component({
     selector: 'app-customerscardview',
     templateUrl: 'customerscardview.component.html'
+    
 })
 export class CustomersCardViewComponent implements OnChanges{
      @Input() custData;

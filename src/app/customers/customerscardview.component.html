@@ -1,6 +1,8 @@
-<div>
-    <h3>customers component card view </h3>
-    <div class="card border-primary mb-3" style="max-width: 18rem;" *ngFor='let data of currentData'>
+<h3>customers component card view </h3>
+<div class = 'row'>
+  
+  <div class="col-sm-4" *ngFor='let data of currentData'>
+    <div id="card_view" class="card border-primary mb-3" style="max-width: 25rem" >
         <div class="card-header">{{data.firstName}}</div>
         <div class="card-body text-primary">
           <img class="card-img-left" src="../assets/images/male.jpg" height="100" alt="Card image cap">
@@ -8,5 +10,6 @@
           <p>{{data.state.name}}</p>
           <a href="#" class="card-link">View Orders</a>
         </div>
-      </div>
+    </div>
+  </div>
 </div>
