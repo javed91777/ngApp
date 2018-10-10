@@ -1,4 +1,4 @@
-import {Component} from "@angular/core"
+import {Component, Output, EventEmitter} from "@angular/core"
 
 @Component({
     selector: 'app-pagination',
@@ -7,5 +7,11 @@ import {Component} from "@angular/core"
 
 export class PaginationComponent{
     data = [1,2,3];
+    @Output() sendInfo = new EventEmitter();
+
+    onclick(val){
+        console.log(val);
+        this.sendInfo.emit(val);
+    }
     
 }
