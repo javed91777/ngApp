@@ -9,4 +9,7 @@ export class Service{
     getInfo(){
         return this.http.get('./assets/data.json');
     }
+    getLoginData(){
+        return this.http.get('./assets/LoginData.json');
+    }
 }

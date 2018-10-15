@@ -13,13 +13,14 @@ import {CoreModule} from "./core/core.module"
 import {HttpClientModule} from "@angular/common/http"
 import {Service} from "./core/services/service"
 import {CommonModule} from "@angular/common"
+import {LoginFormModule} from "./forms/login-form/login-form.module"
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,FormsModule,RouterModule,RouteModule, CoreModule, HttpClientModule
+    BrowserModule,FormsModule,RouterModule,RouteModule, CoreModule, HttpClientModule, LoginFormModule
   ],
   providers: [Service],
   bootstrap: [AppComponent]

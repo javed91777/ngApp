@@ -12,7 +12,7 @@ export class CustomersComponent implements OnInit{
     cardviewflag:boolean = true;
     listviewflag:boolean = false;
     numberOfItemsPerPage = 10;
-    currentPageNumber=0;
+    currentPageNumber;
     constructor(public data: Service){        
         
     }

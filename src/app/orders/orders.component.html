@@ -1,1 +1,21 @@
-<h2>Orders Component</h2>
+<div>
+    <div *ngFor = 'let data of OrdersData'>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Item Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{data.firstName}}</td>
+                <td>Otto</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

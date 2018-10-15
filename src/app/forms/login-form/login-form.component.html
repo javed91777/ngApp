@@ -1,0 +1,32 @@
+<!-- <div>
+  <form [formGroup]='loginForm' (ngSubmit)="onSubmit(loginForm.value.UserName, loginForm.value.Password)">
+    <label>Name: </label>
+    <input type="text" formControlName='UserName' placeholder="username">
+    <label>Password: </label>
+    <input type="password" formControlName='Password' placeholder="password">
+    <button type="submit" disabled="!loginForm.valid">Submit</button><br>
+    <p *ngIf='error'>User name or password is not correct</p>
+  </form>
+</div> -->
+
+
+<form [formGroup]='loginForm' (ngSubmit)="onSubmit(loginForm.value.UserName, loginForm.value.Password)" class='LF'>
+  <div class="form-group">
+    <label for="exampleInputEmail1">User Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" formControlName='UserName' placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName='Password' placeholder="password">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]=loginForm.invalid>Submit</button>
+  <div>
+    <!-- <p *ngIf='error'>User name or password is not correct</p> -->
+  </div>
+</form>
+
+<!-- <input type="text" [formControl]='UserName' placeholder="username">
+<input type="password" [formControl]="Password" placeholder="password">
+<p>{{UserName.value}}</p>
+<button (click)="onSubmit(UserName.value)">Login</button> -->
+
