@@ -1,0 +1,13 @@
+<div class = 'row'>  
+  <div class="col-sm-4" *ngFor='let data of reqData.data'>
+    <div id="card_view" class="card border-primary mb-6" style="max-width: 18rem" >
+        <div class="card-header">{{data.first_name}} {{data.last_name}}</div>
+        <div class="card-body text-primary">
+          <span>
+              <img class="card-img-left" src="{{data.avatar}}" height="100" alt="Card image cap">
+          </span>          
+          <p>{{data.id}}</p>
+        </div>
+    </div>
+  </div>
+</div>

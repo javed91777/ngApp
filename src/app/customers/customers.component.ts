@@ -3,7 +3,8 @@ import {Service} from "../core/services/service"
 
 @Component({
     selector: 'app-customerscomponent',
-    templateUrl: 'customers.component.html'
+    templateUrl: 'customers.component.html',
+    styleUrls: ['./customersStyles.css']
 })
 
 export class CustomersComponent implements OnInit{
@@ -13,6 +14,11 @@ export class CustomersComponent implements OnInit{
     listviewflag:boolean = false;
     numberOfItemsPerPage = 10;
     currentPageNumber;
+    customerImagePath= "../assets/images/customer.jpg";
+    cardViewImagePath= "../assets/images/cardView.png";
+    listViewImagePath= "../assets/images/listView.png";
+    mapViewImagePath= "../assets/images/mapView.jpg";
+    addCustomerImagePath= "../assets/images/addCustomer.jpg";
     constructor(public data: Service){        
         
     }

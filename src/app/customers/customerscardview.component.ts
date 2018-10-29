@@ -13,23 +13,8 @@ export class CustomersCardViewComponent implements OnChanges{
      custIndex;
      custLastIndex:number;
      gender;
-     genderImagePath = "../assets/images/male.jpg";
-
-     setGenderImage(genderType){
-         console.log(genderType);
-         switch(genderType){
-             case 'male':
-             this.genderImagePath = '../assets/images/male.jpg';
-             break;
-             case 'female':
-             this.genderImagePath = '../assets/images/female.png';
-             break;
-             default:
-             this.genderImagePath = '../assets/images/male.jpg';
-             break;
-         }
-        
-     }
+     maleGenderImagePath= "../assets/images/male.jpg";
+     femaleGenderImagePath="../assets/images/female.png";
 
      ngOnChanges(){
          console.log(this.custData);
@@ -67,7 +52,7 @@ export class CustomersCardViewComponent implements OnChanges{
             this.currentData = [];
             for(var i=this.custIndex; i<=this.custLastIndex; i++){
                 this.currentData.push(this.custData[i]);
-                this.setGenderImage(this.custData[i].gender);
+                //this.setGenderImage(this.custData[i].gender);
             }
             console.log("data to be displayed ", this.currentData);
         }

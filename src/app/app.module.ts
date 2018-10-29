@@ -14,6 +14,8 @@ import {HttpClientModule} from "@angular/common/http"
 import {Service} from "./core/services/service"
 import {CommonModule} from "@angular/common"
 import {LoginFormModule} from "./forms/login-form/login-form.module"
+import {AuthGuard} from "./core/services/AuthGuard"
+import {RestService} from "./core/services/restService"
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import {LoginFormModule} from "./forms/login-form/login-form.module"
   imports: [
     BrowserModule,FormsModule,RouterModule,RouteModule, CoreModule, HttpClientModule, LoginFormModule
   ],
-  providers: [Service],
+  providers: [Service, AuthGuard, RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

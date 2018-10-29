@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core"
 import {OrdersComponent} from "./orders.component"
 import {RouterModule} from "@angular/router"
+import {CommonModule} from "@angular/common"
 
 
 const orderroutes = [
@@ -9,7 +10,7 @@ const orderroutes = [
 
 @NgModule({
     declarations: [OrdersComponent],
-    imports: [RouterModule.forChild(orderroutes)],
+    imports: [RouterModule.forChild(orderroutes), CommonModule],
     exports: [RouterModule]
 })
 

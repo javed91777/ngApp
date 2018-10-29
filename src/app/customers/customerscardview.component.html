@@ -1,11 +1,15 @@
-<h3>customers component card view </h3>
-<div class = 'row'>
-  
+<div class = 'row'>  
   <div class="col-sm-3" *ngFor='let data of currentData'>
     <div id="card_view" class="card border-primary mb-3" style="max-width: 18rem" >
         <div class="card-header">{{data.firstName}}</div>
         <div class="card-body text-primary">
-          <img class="card-img-left" src="{{genderImagePath}}" height="100" alt="Card image cap">
+          <span *ngIf="data.gender == 'male'">
+              <img class="card-img-left" src="{{maleGenderImagePath}}" height="100" alt="Card image cap">
+          </span>
+          <span *ngIf="data.gender == 'female'">
+              <img class="card-img-left" src="{{femaleGenderImagePath}}" height="100" alt="Card image cap">
+          </span>
+          
           <p>{{data.address}}, {{data.city}}</p>
           <p>{{data.state.name}}</p>
           <a href="#" class="card-link">View Orders</a>

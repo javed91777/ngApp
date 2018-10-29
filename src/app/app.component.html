@@ -7,9 +7,9 @@
   </h1>
   <input type="text" [value]="title" placeholder="name" (input)='title=$event.target.value'>
   <input type="text" #tval (input) = 'tval'> -->
-  <h1>
+  <!-- <h1>
     Welcome {{userName}}
-  </h1>
+  </h1> -->
 
   <!-- <input type="text" #tval (keyup) = 'tval'>
   <br>
@@ -67,7 +67,8 @@
   {{message}}
   <br>
   <input type="text" (input)="readMessageText($event)"> -->
-
+  <div class="clearfix" style="color: white">.</div>
+  <div class="clearfix" style="color: white">.</div>
   <router-outlet></router-outlet>
 
 </div>

@@ -16,6 +16,7 @@ export class LoginFormComponent implements OnInit{
   userName_loginData;
   pwd_loginData;
   error:boolean = false;
+  loginStatus : boolean= false;
 
   // loginForm = new FormGroup({
   //   UserName: new FormControl(''),
@@ -59,11 +60,17 @@ export class LoginFormComponent implements OnInit{
 
 
       if(userName==this.loginData[i].uname && password == this.loginData[i].pwd){
-        console.log("Yes");
-        this.error = true;
+        console.log("Yes");    
+        this.loginStatus = true;
+        this.data.allowLogin = true;    
           this.router.navigate(['/customers']);
           break;
       }
+    }
+
+    if(!this.loginStatus){
+      this.error = true;
+      this.router.navigate(['/login']);
     }
     
   }

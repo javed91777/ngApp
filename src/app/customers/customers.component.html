@@ -1,19 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    
-   
+<div align="left">
+    <a class="navbar-brand">
+        <img src="{{customerImagePath}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Customers
+    </a>
+</div>
+<div class="clearfix" style="color: white">.</div>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">   
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav mr-auto">
-         <li class="nav-item active">
-           <a class="nav-link" id="cardview" (click)='updateView($event)'>CardView <span class="sr-only">(current)</span></a>
+         <li class="nav-item active">           
+           <a class="nav-link" id="cardview" (click)='updateView($event)'>
+              <img src="{{cardViewImagePath}}" width="30" height="20" class="d-inline-block align-top"> 
+            CardView <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">            
+           <a class="nav-link" id="listview" (click)='updateView($event)'>
+              <img src="{{listViewImagePath}}" width="30" height="20" class="d-inline-block align-top"> 
+            ListView</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" id="listview" (click)='updateView($event)'>ListView</a>
+             <a class="nav-link" routerLink="maps">
+                <img src="{{mapViewImagePath}}" width="30" height="20" class="d-inline-block align-top">  
+              Maps</a>
          </li>
          <li class="nav-item">
-             <a class="nav-link" routerLink="maps">Maps</a>
-         </li>
-         <li class="nav-item">
-            <a class="nav-link" routerLink="addCustomer">Add Customer</a>
+            <a class="nav-link" routerLink="addCustomer">
+                <img src="{{addCustomerImagePath}}" width="30" height="20" class="d-inline-block align-top"> 
+              Add Customer</a>
         </li>
        </ul>
        <form class="form-inline my-2 my-lg-0">
@@ -22,9 +35,11 @@
        </form>
      </div>
    </nav>
+   <div class="clearfix" style="color: white">.</div>
    <!-- <app-CustomersListViewComponent [custData]='datacontent'></app-CustomersListViewComponent> -->
    <app-customerscardview [custData]='datacontent' *ngIf='cardviewflag' [currentPageNumber]='currentPageNumber'></app-customerscardview>
    <app-CustomersListViewComponent [custData]='datacontent' *ngIf='listviewflag' [currentPageNumber]='currentPageNumber'></app-CustomersListViewComponent>
    <!-- <router-outlet></router-outlet> -->
+   <div class="clearfix" style="color: white">.</div>
    <app-pagination (sendInfo)='onpaginationclick($event)'></app-pagination>
    

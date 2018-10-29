@@ -6,29 +6,36 @@ import {Service} from "../core/services/service"
     templateUrl: "orders.component.html"
 })
 
-export class OrdersComponent implements OnInit, OnChanges{
-    constructor(public data: Service){}
+export class OrdersComponent implements OnInit{
+    constructor(public data1: Service){
+        console.log(data1);
+    }
 
     orders = [];
     OrdersData;
     currentData = [];
+    currentOrders = [];
+    ordersImagePath= "../assets/images/orders.png";
 
     ngOnInit(){
         let selfthis = this;
 
-        this.data.getInfo().subscribe(function (dataInfo){
+        this.data1.getInfo().subscribe(function (dataInfo){
             console.log(dataInfo);
             selfthis.OrdersData = dataInfo;            
         })
 
         setTimeout(() =>{
             console.log("orders component on init ", this.OrdersData);
-        }, 1000)
+            selfthis.currentData.push(this.OrdersData);
+            console.log(this.currentData);
+        }, 1000)        
     }
 
-    ngOnChanges(){
-        this.currentData.push(this.OrdersData);
-    }
+    // ngOnChanges(){
+    //     this.currentData.push(this.OrdersData);
+    //     console.log(this.currentData);
+    // }
 
 
 }

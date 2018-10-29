@@ -1,21 +1,31 @@
+<div align="left">
+    <a class="navbar-brand">
+        <img src="{{ordersImagePath}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Orders
+    </a>
+</div>
+<div class="clearfix" style="color: white">.</div>
 <div>
-    <div *ngFor = 'let data of OrdersData'>
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Product Name</th>
-                <th scope="col">Item Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>{{data.firstName}}</td>
-                <td>Otto</td>
-              </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="col-sm-3" *ngFor='let x of OrdersData'>    
+    <div style="color:blue"><b>{{x.firstName}}</b></div>
+      <table class="table table-striped">        
+          <thead>            
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Item Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let y of x.orders; index as i'>
+              <th scope="row">{{i}}</th>
+              <td>{{y.productName}}</td>
+              <td>{{y.itemCost}}</td>
+            </tr>
+          </tbody>
+      </table>
+      <br>
+      <br>
+  </div>
 </div>
 

@@ -1,4 +1,5 @@
 import {Component} from "@angular/core"
+import {Service} from "./services/service"
 
 @Component({
     selector: 'app-menu',
@@ -6,5 +7,5 @@ import {Component} from "@angular/core"
 })
 
 export class MenuComponent{
-
+    customersImagePath= "../assets/images/customers.png";
 }
