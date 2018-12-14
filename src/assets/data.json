@@ -550,5 +550,53 @@
         ],
         "latitude": 18.7546171,
         "longitude": 73.40623419999997
+    },
+    {
+        "id": 23,
+        "firstName": "Dileep",
+        "lastName": "DMV",
+        "gender": "male",
+        "address": "SR Nagar",
+        "city": "Hyderabad ",
+        "state": {
+            "abbreviation": "TS",
+            "name": "Telangana"
+        },
+        "orders": [
+            {
+                "productName": "Frisbee",
+                "itemCost": 2.99
+            },
+            {
+                "productName": "Hat",
+                "itemCost": 5.99
+            }
+        ],
+        "latitude": 18.7546171,
+        "longitude": 73.40623419999997
+    },
+    {
+        "id": 23,
+        "firstName": "Javeed",
+        "lastName": "Syed",
+        "gender": "male",
+        "address": "Langar Houz",
+        "city": "Hyderabad ",
+        "state": {
+            "abbreviation": "TS",
+            "name": "Telangana"
+        },
+        "orders": [
+            {
+                "productName": "Frisbee",
+                "itemCost": 2.99
+            },
+            {
+                "productName": "Hat",
+                "itemCost": 5.99
+            }
+        ],
+        "latitude": 18.7546171,
+        "longitude": 73.40623419999997
     }
 ]
